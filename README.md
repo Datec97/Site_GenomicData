@@ -12,4 +12,4 @@ Que insights tipo podemos obtener de esta valiosa información:
 
 Nótese: La importancia de este tipo de proyectos en ingeniería y posterior análisis de datos por parte de los investigadores, nos brinda la posibilidad de tener acceso a una amplia gama de soluciones médicas al ser tratados con fármacos alineados a combatir enfermedades a nivel global.
 
-Enlace -> [https://datec97.github.io/Site_HabitsCustomer/AWS_Project.html](https://datec97.github.io/Site_GenomicData/AWS_Project.html)
+Enlace -> https://datec97.github.io/Site_GenomicData/AWS_Project.html
