@@ -38,7 +38,8 @@ body{
     /* font-family: 'Courgette', cursive; */
     font-family: 'Work Sans', sans-serif;
     font-weight: normal;
-    background-image: linear-gradient(to top, var(--oranger) 0% , var(--blanco) 100%);
+   /*  background-image:  */
+    background-color: var(--oranger);
     /* background-image: url(/img/bg_orange.jpg); */
     
 
