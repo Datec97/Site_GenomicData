@@ -8,6 +8,7 @@
     --azulejo: #0097a7;
     --grisaseo: darkgrey;
     --grisaseoClaro : #dfe9f3;
+    --oranger : #F77849;
 }
 /* Globales */
 /*hacemos el hack para representar mejor
@@ -37,8 +38,8 @@ body{
     /* font-family: 'Courgette', cursive; */
     font-family: 'Work Sans', sans-serif;
     font-weight: normal;
-    /* background-image: linear-gradient(to top, var(--grisaseoClaro) 0% , var(--blanco) 100%); */
-    background-image: url(/img/bg_orange.jpg);
+    background-image: linear-gradient(to top, var(--oranger) 0% , var(--blanco) 100%);
+    /* background-image: url(/img/bg_orange.jpg); */
     
 
 }
