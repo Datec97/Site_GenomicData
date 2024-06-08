@@ -28,29 +28,9 @@
 </head>
 
 <body>
-  <header>
-    <!-- <figure>
-            <img src="./Diseñador Freelancer_files/Group 12logov2.jpg" alt="logo"><span
-                class="subtitle1">Freelancer</span>
-        </figure> -->
-    <!-- <h1 class="title1">Alexis Cisneros <span> Freelancer </span></h1> -->
-  </header>
-  <!--Navegador, aca los enlaces "a" se ordenan de izq a derec.
-        y normalmente son de tpo inline-->
-  <!--Una clase puede tener -->
-  <div class="content_main">
-    <nav class="contenedor_nav">
-      <a href=""></a>
-      <!-- https://datec97.github.io/Site_HabitsCustomer/Dise%C3%B1ador%20Freelancer.html/# -->
-      <!-- <a href="https://pry-1.netlify.app/#nos" id="sepa">Etapa 3</a> -->
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-    </nav>
+  <div class="contenedor_nav">
   </div>
-  <!--Seccion1-->
-  <!--Imagen de la seccion 1-->
-  <!--<img src="imgns/hero.jpg" alt="heroe">-->
+  <!-- encabezado -->
   <section class="heroe" style="background-image: url('img/cad_biomol.jpg')">
     <div class="container-heroe">
       <h2>ETL para el analisis de moléculas bioactivas e información genómica</h2>
@@ -72,19 +52,16 @@
       </div>
       </div>
   </section>
-  <!--Seccion2-->
-  <main class="sombra" id="nos">
-    <div class="scrollando">
-      <!--<h2>Mis servicios</h2>-->
-      <!--<div class="services">-->
 
+
+  <!--cuerpo-->
+  <main class="sombra" id="nos">
       <h2>Desarrollo del proyecto en AWS</h2>
 
       <!-- salto de linea -->
       <br />
       <div class="responsive_contenido">
-        <pre class="fl_contenido">
-         
+<!--          
         <div class="acomode_p" style="margin-top:-10rem">
           <pre>
             <b>Descripción: </b>
@@ -95,67 +72,83 @@
             efectivos.
           </pre>
         </div>
-           
-        <div class="acomode_p" style="margin-top:-10rem">
-          <pre>
+-->
+      <p>
+        <b>Descripción: </b>
+        <br>
+        <br>
+          Este dataset, es extraida desde la base de datos ChEMBL, la cual se trata de una base de datos
+          que contiene información sobre moléculas bioactivas o información genómica que le permite a 
+          científicos e investigadores poder crear fármacos efectivos. Esta base de datos recopila información
+          química, de bioactividad y genómica para facilitar la traducción de datos genómicos en nuevos fármacos
+          efectivos.
+      </p>
+          <p>
             <b>Objetivo:</b>
             Para este dataset, se pretende realizar un procesamiento y limpieza, con apoyo de la herramienta 
             AWS Glue Data Brew.
             <br>
+            <br>
             <b>Diseño lógico de la solución cloud:</b>
-          </pre>
-        </div>
-        
+          </p>
         <figure>
           <a href="img/aws_sol.jpg" target="_blank" class="Click_zoom">
-            <img src="img/aws_sol.jpg" class="peculiaridad_2" style="margin-top: -10rem">
+            <img src="img/aws_sol.jpg">
           </a>
         </figure>
+        <p>
 
-        <div class="acomode_p" style="margin-top:-10rem">
-          
-            <h2>Etapa de configuración de nube AWS</h2>
-          <pre>
+            <b>Etapa de configuración de nube AWS:</b>
+        
             <li>En primera instancia se generan las credenciales de usuario root en IAM , configurando
-                un MFA y usuario administrativo en IAM identity center con un MFA diferente.</li>
+            un MFA y usuario administrativo en IAM identity center con un MFA diferente.</li>
+                <br>
             <li>Configuramos también la herramienta de AWS CLI para su comunicación con el sistema operativo,
-              de esta forma poder gestionar los servicios de AWS desde el command line, configurar 
-              credenciales y permisos de usuarios AWS.</li>
-
-            Ahora a generar un usuario IAM (Indentity and Access management) desde la cuenta root creada para
+            de esta forma poder gestionar los servicios de AWS desde el command line, configurar 
+            credenciales y permisos de usuarios AWS.</li>
+            <br>
+            <p>
+            Ahora al generar un usuario IAM (Indentity and Access management) desde la cuenta root creada para
             fines de cumplir con políticas de seguridad AWS y evitar configuraciones malintencionadas, también
             aprovechar la gestión y control de los roles y permisos asignados en cada servicio.
-          </pre>
-        </div>
+            </p>
+        </p>
+
         <figure>
           <a href="img/cnsl_1.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_1.png" style="margin-top: -10rem">
+            <img src="img/cnsl_1.png" >
           </a>
         </figure>
-        <pre>
+
+        <p>
           Nótese:
           Esta cuenta ha sido creada y configurada bajo el grupo ‘admin_dv’ y dispone de hasta 6 roles,
           incluyendo el acceso al servicio de AWS Glue Databrew para efectos del procesado de la data
-        </pre>
+        </p>
+
         <figure>
           <a href="img/cnsl_2.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_2.png" style="margin-top: -5rem">
+            <img src="img/cnsl_2.png">
           </a>
         </figure>
         
-        <pre>
+        <p>
           El inicio de sesión a la consola y trabajo del proyecto entonces será desde la cuenta 
           ‘dev_alexis’. Acto siguiente, procedemos a localizar el servicio Glue DataBrew y usar 
           la BD en mención
-        </pre>
+        </p>
         
         <figure>
           <a href="img/cnsl_3.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_3.png" style="margin-top: -5rem">
+            <img src="img/cnsl_3.png">
           </a>
         </figure>
+    </div>
+  </main>
 
-        <pre>
+  <main class="sombra" id="nos">
+    <div class="responsive_contenido">
+        <p>
           A simple vista, podemos ver que inicialmente tenemos 39 columnas y 500 registros o 
           filas en la tabla.
 
@@ -165,105 +158,108 @@
         
           Acto siguiente, bajo una condición de FILTER, procedemos a eliminar todo aquel registro del 
           campo <i>“CONFIDENCE-SCORE”</i>, cuya magnitud sea menor o igual que 7
-        </pre>
+        </p>
         
         <figure>
           <a href="img/cnsl_4.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_4.png" style="margin-top: -5rem; height: 40rem; 
-            width: 80rem;">
+            <img src="img/cnsl_4.png">
           </a>
         </figure>
-        <pre>
-          De esta forma, quedamos solo con 119 filas y 38 columnas.
 
+        <p>
+          De esta forma, quedamos solo con 119 filas y 38 columnas.
+        </p>
+        <p>
           Revisando la data, podemos apreciar que existen demasiados “nulls” para el campo <i>"ASAP_TEST_TYPE"</i>
           y <i>"ASSAY_CATEGORY"</i> lo que va implicar que se deban rellenar con algún valor especifico, nos apoyamos
           entonces de MISSING
-        </pre>
+        </p>
+
         <figure>
           <a href="img/cnsl_5.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_5.png" style="margin-top: -5rem; height: 40rem; 
-            width: 80rem;">
+            <img src="img/cnsl_5.png">
           </a>
         </figure>
         
-        <pre>
+        <p>
           Procedemos a publicar nuestra receta de ETL, para futuros tratamientos de otros dataset:
           Sección “recipe”, luego “publish”
-        </pre>
+        </p>
+
         <figure>
           <a href="img/cnsl_7.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_7.png" style="margin-top: -5rem; height: 40rem; 
-            width: 80rem;">
+            <img src="img/cnsl_7.png">
           </a>
         </figure>
 
-        <pre>
-          Configuración del Bucket del servicio Amazon S3
-
+        <p>
+          <b>Configuración del Bucket del servicio Amazon S3</b>
+          <br>
+          <br>
           Este servicio, esta diseñado para alojar todo tipo de datos, posee una capacidad limitado en el plan gratuito. 
           Por otro lado, se posiciona en el mercado como uno de los principales lideres en su categoria
-          Para esto contamos con las siguientes características a configurar: <figure>
+          Para esto contamos con las siguientes características a configurar:
+        </p>
            <figure>
             <img src="img/s3.png" style=" margin-left: 6rem;margin-top: -2rem; height: 40rem; width: 80rem;"></figure>
           </figure>
+
           <li>Nombre único, sin caracteres especiales </li> 
           <li>Configuramos región, para el caso es US East (Ohio) us-east-2</li> 
           <li>Habilitamos encriptación del lado del servidor.</li>
           <li>Capacidad para 300 objetos</li>
+          <p>
+              Procedemos ahora a crear trabajo en el AWS Glue Databrew, configurando las siguientes propiedades:
+          </p>
+        <p>
+    </div>
+  </main>
 
-          Procedemos ahora a crear trabajo en el AWS Glue Databrew, configurando las siguientes propiedades:
-        </pre>
+  <main class="sombra" id="nos">
+    <div class="responsive_contenido">
 
         <figure>
-          <a href="img/cnsl_09.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_9.png" style="margin-top: -5rem;" >
+          <a href="img/cnsl_9.png" target="_blank" class="Click_zoom">
+            <img src="img/cnsl_9.png">
           </a>
         </figure>
 
         <figure>
-          <a href="img/cnsl_08.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_8.png" style="margin-top: -5rem;" >
+          <a href="img/cnsl_8.png" target="_blank" class="Click_zoom">
+            <img src="img/cnsl_8.png">
           </a>
         </figure>
-        <pre>
+        <p>
           En el siguiente esquema, se pueden apreciar  los parametros base que conlleva construir un repositorio
           o Datawarehouse, los 3 principales son: salida de datos, tipo de archivos y tipo de compresión. 
-        </pre>
+        </p>
         <figure>
           <a href="img/cnsl_11.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_11.png" style="margin-top: -5rem;" >
+            <img src="img/cnsl_11.png" >
           </a>
         </figure>
-        <pre>
+        <p>
           Ya en este último punto, consta del despliegue y ejecución automática del ETL creado, conocido también
           como Scheduler, puede ser posible programarla inclusive. Toda la data que se actualiza, pasa por este 
           dataflow y se aloja en un sistema de almacenamiento para su puesta en producción.
-        </pre>
+        </p>
         <figure>
           <a href="img/cnsl_13.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_13.png" style="margin-top: -5rem;" >
+            <img src="img/cnsl_13.png" >
           </a>
         </figure>
-        <pre>
+        <p>
           Nota: 
           Podemos validar el actual flujo de procesamiento de datos desde la opción Linage. Dentro, se visualiza el
           esquema lógico que la data sigue, así como los servicios que la soportan. Por ejemplo, se encuentra alojada
           en un bucket (contenedor lógico) de Amazon S3. s3://databrew-public-datasets-us-east-2/chembl-27.parquet
-        </pre>
+        </p>
         <figure>
           <a href="img/cnsl_14.png" target="_blank" class="Click_zoom">
-            <img src="img/cnsl_14.png" style="margin-top: -5rem;" >
+            <img src="img/cnsl_14.png" >
           </a>
         </figure>
-
-
-
-
-      </pre>
     </div>
-    
-
   </main>
 
   <footer>

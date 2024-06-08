@@ -10,24 +10,12 @@
     --grisaseoClaro : #dfe9f3;
     --oranger : #F77849;
 }
-/* Globales */
-/*hacemos el hack para representar mejor
-los tamaños de fuente en el documento con el 'rem'*/
 
 html{
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* Hagamos un scroll para el proyecto final */
-    
-    /* scroll-snap-type: y proximity; */
 }
-
-/* Hacemos scroll para el proyecto*/
-/* .scrollando, .content_main, .formulario{
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-} */
 
 *, *:before, *:after{
     box-sizing: inherit;
@@ -45,33 +33,15 @@ body{
 
 }
 
-/* Estilos al logo */
-figure,.Click_zoom{
-    /* tamaño original: 867x252 */
-    max-width: 100%;
-    max-height: 75rem;  
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-.Click_zoom{
-    padding-left: 10rem;
-}
-figure img{ 
-    max-width: 75.18rem;
-    max-height: 80.75rem;
-    padding: 1rem;
+
+img{
+    max-width: 60rem;
 }
 
+
 @media (max-width: 768px){
-    figure{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    figure img{ 
+    
+    img{ 
         max-width: 100%;
     }
 }
@@ -79,35 +49,6 @@ figure img{
 .subtitle1{
     font-size: 4.5rem;
     color: blueviolet;
-}
-
-.boton{
-    background-color: var(--azulejo);
-    color: var(--blanco);
-    text-decoration: none;
-    padding: 1rem 3rem;
-    margin-top: 3rem;
-    border-radius: .5rem;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-family: serif;
-    font-weight: bold;
-    border:none
-}
-
-.boton:hover{
-    cursor: pointer;
-}
-
-@media (max-width: 990px){
-    .boton{
-        width: 90%;
-        text-align: center;
-    }
-    .acomode_p{
-        /* width: 90%; */
-        font-size: 1.2rem;
-    }
 }
 
 .sombra{
@@ -120,12 +61,12 @@ figure img{
     background-color: var(--blanco);
     padding: 2rem;
     border-radius: .5rem;
-    margin: 0 auto;
-    max-width: 120rem;
+    margin: 2rem auto;
+    max-width: 80rem;
 }
 /* Headings */
 h1{
-    font-size: 3,8rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 h2{
@@ -138,8 +79,18 @@ h1,h2,h3{
     text-align: center;
 }
 
+p, .modeling, li{
+    max-width: 110%;
+}
 
-
+@media(max-width: 768px){
+    /*LA condicion nos dice q a partir de un ancho
+    de pantalla minimo de 480px, mostrar:*/
+    p{
+        max-width: 100%;
+        color: black;
+    }
+}
 
 /* utilidades */
 .w-sm-100{
@@ -157,100 +108,16 @@ h1,h2,h3{
     justify-content: flex-end;
 }
 
-/* Navegacion */
-.content_main{
-    max-width: 100%;
-    margin: 0 auto;
-}
+
 .contenedor_nav {
     background-color: var(--oscuro);
-   /* max-width: 120rem;  equivale -> 1200px*/
-    /*Ojo aca: El width lo que hace es forzar los 1200px
-    del ancho total de pantalla, sin autoacomodarse.
-    pero el max-width permite tomar los 1200px solo si esta disponible
-    sino que se automocomode*/
-    /*margin: 0 auto;*/
-
-    /*Tanto margin como padding aceptan 2 valores [1er0(arriba abajo), 2do(der, izq)]
-    o 4[arriba, derecha, abajo, izquierda], dependiendo
-    cuando es 1 valor (se aplica a los 4)*/
-
- /* word-spacing: 7cm;*/
- /* establezco como display el "flex" que me permita agarrar todo el contenido*/
     display: flex;
     flex-direction: column;
-    /*luego, lo centro o lo muevo al lado que desee*/
-    /*align-items: center;*/
     max-width: 100%;
-    height: 2.5rem;
+    height: 1rem;
 
 }
 
-@media (min-width: 768px){
-    .contenedor_nav{
-        /*Este media hereda los atributos del
-        .contenedor_nav(y solo queremos que a partir
-        de un determinado ancho de pantalla se muestre en row[fila])*/
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-}
-.contenedor_nav a{
-
-    text-align: center;
-    /* font-family: 'Times New Roman'; */
-    font-size: 2rem;
-    font-weight: bolder;
-    color: var(--blanco);
-    text-decoration: none;
-    padding: 1rem;
-}
-/* Le coloca un fondo cuando se coloca el mouse sobre este*/
-.contenedor_nav a:hover{
-    background-color: var(--amarillezco);
-    color: var(--oscuro);
-}
-.contenedor_nav #sepa{
-    word-spacing: 0.1cm;
-}
-
-/*Selector por atributo
-form fieldset input{
-    border-radius: 2rem;
-}*/
-/*Selector por attributo*/
-/* button{
-    background-color: cornflowerblue;
-    color: white;
-    font-weight: bolder;
-    font-size: 2rem;
-    width: 10rem;
-    height: 4rem;
-    /*
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    border-end-end-radius: 2rem;
-    border-end-start-radius: 2rem;
-    es reemplazado por:
-    
-    border-radius: 2rem;
-} */
-
-/*Agregando media querys para RESPONSIVE DESIGNS*/
-/*La estructura comprende un "@media(condicion){}"
-que permite ejecutar el codigo con una determinada resolucion*/
-@media(max-width: 768px){
-    /*LA condicion nos dice q a partir de un ancho
-    de pantalla minimo de 480px, mostrar:*/
-    body{
-        background-color: lightyellow;
-    }
-}
-@media (max-width: 360px){
-    p{
-        color: darkblue;
-    }
-}
 /* contenido HEROE */
 /*Agregamos imagenes con CSS3*/
 .heroe{
@@ -525,12 +392,6 @@ footer{
 
 /*Etiquetas para  formato al contenido*/
 
-/* .fl_contenido{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-} */
 
 .responsive_contenido{
 
@@ -549,12 +410,6 @@ footer{
 
 .peculiaridad{
     margin-left: 130px;
-}
-
-.peculiaridad_2{
-    max-width: 350rem;
-    max-height: 40rem;
-    /* margin-left: 5rem; */
 }
 
 /* CSS PARA CONSULTAS - QUERY */
